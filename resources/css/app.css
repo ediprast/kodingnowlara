@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-white-light;
+}
+
+.bg-hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 80vh;
+}
+
+.btn-purple {
+    @apply bg-purple-light rounded-full py-2 px-5 text-white-light transition-all duration-300 border border-purple-light hover:bg-white hover:text-purple-light;
+}
+
+.btn-square {
+    @apply border-2 rounded-lg py-3 w-full text-center transition-all duration-300
+}
+
+@layer utilities {
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(50%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes scaleUp {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .fadeInUp {
+        animation: fadeInUp 1s;
+    }
+
+    .fadeInDown {
+        animation: fadeInDown 1s;
+    }
+
+    .scaleUp {
+        animation: scaleUp 1s;
+    }
+}
+
+
